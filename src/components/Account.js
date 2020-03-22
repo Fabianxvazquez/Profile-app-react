@@ -6,11 +6,11 @@ const Account = () => (
     <Card.Content>
       <Card.Header> firstName lastName </Card.Header>
       <Card.Meta>
-        email: email@email.com
+        Date Joined: dateJoined
       </Card.Meta>
     </Card.Content>
     <Card.Content>
-      <p>Membership Level: membershipLevel </p>
+      <p>email: email@email.com</p>
     </Card.Content>
   </Card>
 ) 

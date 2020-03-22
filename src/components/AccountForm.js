@@ -11,7 +11,7 @@ class AccountForm extends React.Component {
   }
   
   render() {
-    const { firstName, lastName, membershipLevel, email } = this.state;
+    const { firstName, lastName, email, } = this.state;
     return (
       <Form onSubmit={this.handleSubmit}>
         
@@ -38,14 +38,6 @@ class AccountForm extends React.Component {
           value={email}
           onChange={this.handleChange}
         />
-
-        <Form.Select
-          label="Membership Level"
-          name="membershipLevel"
-          value={membershipLevel}
-          onChange={this.handleChange}
-          options={membershipOptions}
-        />
         
         
         <Form.Button color="blue">Save</Form.Button>
@@ -54,12 +46,7 @@ class AccountForm extends React.Component {
   }
 }
 
-const membershipOptions = [
-  { key: "b", text: "Bronze", value: "Bronze", },
-  { key: "s", text: "Silver", value: "Silver", },
-  { key: "g", text: "Gold", value: "Gold", },
-  { key: "p", text: "Platinum", value: "Platinum", },
-];
+
 
 
 
