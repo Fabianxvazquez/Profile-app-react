@@ -9,8 +9,8 @@ export const AccountConsumer = AccountContext.Consumer;
 // Create the provider using a traditional React.Component class
 class AccountProvider extends React.Component {
   state = {
-    firstName: "Firstman77",
-    lastName: "lastman77",
+    firstName: "Fabian",
+    lastName: "vazquez",
     dateJoined: "12/18/18",
     email: "email@email.com",
   };
