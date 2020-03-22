@@ -4,9 +4,9 @@ import {Card, } from "semantic-ui-react"
 const Account = () => (
   <Card>
     <Card.Content>
-      <Card.Header> username </Card.Header>
+      <Card.Header> firstName lastName </Card.Header>
       <Card.Meta>
-        Date Joined: dateJoined
+        email: email@email.com
       </Card.Meta>
     </Card.Content>
     <Card.Content>
