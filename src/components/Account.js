@@ -1,23 +1,22 @@
-import React from "react"
+import React, {useContext} from "react"
 import {Card, } from "semantic-ui-react"
-import {AccountConsumer, } from "../providers/AccountProvider"
+import {AccountContext, } from "../providers/AccountProvider"
 
-const Account = () => (
-  <AccountConsumer>
-    { value => (
-      <Card>
-      <Card.Content>
-        <Card.Header>{value.firstName} {value.lastName} </Card.Header>
-        <Card.Meta>
-          Date Joined: {value.dateJoined}
-        </Card.Meta>
-      </Card.Content>
-      <Card.Content>
-        <p>Email: {value.email}</p>
-      </Card.Content>
-    </Card>
-    )}
-  
-  </AccountConsumer>
-) 
+const Account = () => {
+  const {firstName, lastName, email, dateJoined} = useContext(AccountContext)
+
+  return (
+    <Card>
+    <Card.Content>
+      <Card.Header>{firstName} {lastName} </Card.Header>
+      <Card.Meta>
+        Date Joined: {dateJoined}
+      </Card.Meta>
+    </Card.Content>
+    <Card.Content>
+      <p>Email: {email}</p>
+    </Card.Content>
+  </Card>
+  )
+}
 export default Account

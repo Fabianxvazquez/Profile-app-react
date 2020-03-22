@@ -1,7 +1,7 @@
 import React from "react";
 
 // Set Up The Initial Context
-const AccountContext = React.createContext();
+export const AccountContext = React.createContext();
 
 // Create an exportable consumer that can be injected into components
 export const AccountConsumer = AccountContext.Consumer;
@@ -11,7 +11,7 @@ class AccountProvider extends React.Component {
   state = {
     firstName: "Fabian",
     lastName: "vazquez",
-    dateJoined: "12/18/18",
+    dateJoined: "3/22/20",
     email: "email@email.com",
     updateAccount: (account) => this.updateAccount(account),
   };
