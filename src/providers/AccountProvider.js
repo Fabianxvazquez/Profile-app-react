@@ -13,7 +13,12 @@ class AccountProvider extends React.Component {
     lastName: "vazquez",
     dateJoined: "12/18/18",
     email: "email@email.com",
+    updateAccount: (account) => this.updateAccount(account),
   };
+
+  updateAccount = (account) => {
+    this.setState({...account, })
+  }
     
   render() {
     return (

@@ -14,6 +14,8 @@ class AccountForm extends React.Component {
   
   handleSubmit = (e) => {
     e.preventDefault();
+    const account = {...this.state,};
+    this.props.updateAccount(account)
   }
   
   render() {
@@ -61,6 +63,7 @@ const ConnectedAccountForm = (props) => {
           firstName={value.firstName}
           lastName={value.lastName}
           email={value.email}
+          updateAccount={value.updateAccount}
         />
       )}
     </AccountConsumer>
