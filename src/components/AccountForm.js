@@ -1,8 +1,14 @@
 import React from "react";
 import { Form, } from "semantic-ui-react";
+import {AccountConsumer,} from "../providers/AccountProvider"
 
 class AccountForm extends React.Component {
-  state = { firstName: "", lastName: "", };
+  state = { 
+    firstName: this.props.firstName, 
+    lastName: this.props.lastName, 
+    email: this.props.email,
+  }
+    
   
   handleChange = (e, { name, value }) => this.setState({ [name]: value, });
   
@@ -46,8 +52,22 @@ class AccountForm extends React.Component {
   }
 }
 
+const ConnectedAccountForm = (props) => {
+  return (
+    <AccountConsumer>
+      { value => (
+        <AccountForm 
+          { ...props }
+          firstName={value.firstName}
+          lastName={value.lastName}
+          email={value.email}
+        />
+      )}
+    </AccountConsumer>
+  )
+}
 
 
 
 
-export default AccountForm;
+export default ConnectedAccountForm;
